@@ -25,3 +25,44 @@ print(pd.merge(planets,birds))
 import seaborn as sns
 planets=sns.load_dataset("planets")
 print(planets.groupby("method")["distance"].aggregate([max,min]))
+
+
+
+
+
+
+
+
+import pandas as pd
+m={
+   "grup":["a","b","c","a","b","c"],
+   "not1":[12,45,78,25,69,48],
+   "not2":[45,61,78,64,532,33]
+   }
+lş1=pd.DataFrame(m)
+print(lş1)
+#   grup  not1  not2
+# 0    a    12    45
+# 1    b    45    61
+# 2    c    78    78
+# 3    a    25    64
+# 4    b    69   532
+# 5    c    48    33
+
+lş2=lş1.iloc[[3],[1]] # satır ve sutun ismi ile birlikte yazdırır.
+
+lş3=lş1.iloc[3,1] # satır ve sütun ismi olmadan sadece değer yazdırır.
+
+print(lş2)
+#    not1
+# 3    25
+
+print(lş3)
+# 25
+
+
+
+
+
+
+
