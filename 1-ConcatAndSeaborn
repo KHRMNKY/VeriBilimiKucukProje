@@ -16,3 +16,12 @@ planets=sns.load_dataset("planets")
 birds=sns.load_dataset("planets")
 birds.columns=["a","b","c","mass","distance","year"]
 print(pd.merge(planets,birds))
+
+
+
+
+
+
+import seaborn as sns
+planets=sns.load_dataset("planets")
+print(planets.groupby("method")["distance"].aggregate([max,min]))
