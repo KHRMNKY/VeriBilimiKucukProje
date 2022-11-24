@@ -3,3 +3,16 @@ import pandas as pd
 planets=sns.load_dataset("planets")
 planets.columns=["a","b","c","d","e","f"]
 print(pd.concat([planets,planets], ignore_index=True))
+
+
+
+
+
+
+
+import seaborn as sns
+import pandas as pd
+planets=sns.load_dataset("planets")
+birds=sns.load_dataset("planets")
+birds.columns=["a","b","c","mass","distance","year"]
+print(pd.merge(planets,birds))
