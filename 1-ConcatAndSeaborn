@@ -32,6 +32,17 @@ print(planets.groupby("method")["distance"].aggregate([max,min]))
 
 
 
+import seaborn as sns
+import pandas as pd
+df=pd.read_csv("data2.txt")
+print(df.head(20))
+
+
+
+
+
+
+
 
 import pandas as pd
 m={
@@ -50,9 +61,7 @@ print(lş1)
 # 5    c    48    33
 
 lş2=lş1.iloc[[3],[1]] # satır ve sutun ismi ile birlikte yazdırır.
-
 lş3=lş1.iloc[3,1] # satır ve sütun ismi olmadan sadece değer yazdırır.
-
 print(lş2)
 #    not1
 # 3    25
