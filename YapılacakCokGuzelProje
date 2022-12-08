@@ -2,10 +2,6 @@ https://streamable.com/vx3n3v
 
 # link yukarda:
 
-
-# sınırlar dışında 1 olan yerlerde o 1 birin çaprazlarında da 1 var ise ilk başta ki 1'i 0 yapmanı istemiş.
-
-import numpy as np
 import pandas as pd
 tablo={
        "s1":[1,0,0,0,0,0],
@@ -17,30 +13,26 @@ tablo={
        }
 
 pd=pd.DataFrame(tablo)
+print(pd)
 
 n=0
-while n<5:
+while n<4:
     n=n+1
     k=1
-    while k<5:
+    for p in range(4):
         m=pd.iloc[k,n]
         if m==1:
             if m==pd.iloc[k-1,n+1] or m==pd.iloc[k+1,n+1] or m==pd.iloc[k-1,n-1] or m==pd.iloc[k+1,n-1]:
-                k=k+1
+                
                 pd.iloc[k,n]=0
+                k=k+1
         else:
-            continue
+            
+            
+            k=k+1
                 
 print(pd)
         
-
-
-
-
-
-
-
-
 
 
 
