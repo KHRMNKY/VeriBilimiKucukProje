@@ -1,0 +1,45 @@
+#çok güzel bir yapı oluşturmuş oldum.
+
+import numpy as np
+import pandas as pd
+a=np.random.randint(1,100,20)
+b=np.random.randint(50,150,20)
+A=pd.DataFrame(a)
+B=pd.DataFrame(b)
+
+c=np.arange(len(a))
+C=pd.DataFrame(c)
+C[:]="A"
+k=pd.concat([C,A],axis=1)
+
+d=np.arange(len(a))
+D=pd.DataFrame(d)
+D[:]="B"
+l=pd.concat([D,B],axis=1)
+M=pd.concat([k,l],axis=1)
+M.columns=["sınıf1","puan1","sınıf2","puan2"]
+print(M)
+
+
+
+
+
+
+
+
+
+
+
+import numpy as np
+import pandas as pd
+a=np.random.randint(1,100,20)
+b=np.random.randint(50,150,20)
+c=np.arange(len(a))
+C=pd.DataFrame(c)
+
+A=pd.DataFrame(a)
+Aa=pd.concat([C,A])
+B=pd.DataFrame(b)
+Bb=pd.concat([C,B,A],axis=1)
+Bb.columns=["C","B","A"]
+print(Bb)
