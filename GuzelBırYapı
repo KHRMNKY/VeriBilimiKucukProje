@@ -17,7 +17,7 @@ D=pd.DataFrame(d)
 D[:]="B"
 l=pd.concat([D,B],axis=1)
 M=pd.concat([k,l],axis=1)
-M.columns=["sınıf1","puan1","sınıf2","puan2"]
+M.columns=["sınıf","puan","sınıf","puan"]
 print(M)
 
 
