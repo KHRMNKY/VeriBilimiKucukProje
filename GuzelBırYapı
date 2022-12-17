@@ -43,3 +43,6 @@ B=pd.DataFrame(b)
 Bb=pd.concat([C,B,A],axis=1)
 Bb.columns=["C","B","A"]
 print(Bb)
+
+import seaborn as sns 
+print(sns.boxplot(x="sınıf",y="puan",data=M))
